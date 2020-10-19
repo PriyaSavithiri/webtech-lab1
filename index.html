@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+<title>HUMAN RESOURCE MANAGEMENT-WBTECH</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<script src= 
+    "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"> 
+        </script> 
+        <script> 
+            var application = angular.module('myApp', []); 
+      
+            application.factory('random', function() { 
+                var randomObject = {}; 
+                var number = Math.floor(Math.random() * 100); 
+                randomObject.generate = function() { 
+                    return number; 
+                }; 
+                return randomObject; 
+            }); 
+            
+            application.controller('thisapp', function($scope, random) { 
+                $scope.generateRandom = function() { 
+                    $scope.randomNumber = random.generate(); 
+                }; 
+            }); 
+        </script> </head>
+<body>
+
+<!-- Header -->
+<header class="w3-container w3-theme w3-padding" id="myHeader">
+  <i onclick="w3_open()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i> 
+  <div class="w3-center">
+  <h1>HUMAN RESOURCE MANAGEMENT</h1>
+  <img class="mySlides w3-animate-opacity" src="logo1.jpg" >
+  <h2 class="w3-xxxlarge w3-animate-bottom">HIRE.TRAIN.RETAIN</h2>
+  </div>
+</header>
+
+<h2><a href="CV.html"><center>Click here to submit your Curriculum vitae(CV)!</center></a></h2>
+<br><h3><a href="job.html"><center>Click here to search job!</center></a></h3>
+<br>
+<br>
+<div ng-app="myApp" ng-controller="thisapp"> 
+    <button ng-click="generateRandom()"> 
+      Generate Application Number 
+  </button> 
+    <br>{{randomNumber}} 
+</div> 
+
+<div class="w3-row-padding w3-center w3-margin-top">
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>ABOUT US</h3><br>
+  <img class="mySlides w3-animate-opacity" src="logo.jpg" >
+  <p>Human Resource Management is the strategic approach to the effective management of people in a company or organization such that they help their business gain a competitive advantage. It is designed to maximize employee performance in service of an employer's strategic objectives.</p>
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>AREAS OF HRM</h3><br>
+  <img class="mySlides w3-animate-opacity" src="g.jpg" >
+  <p>They are
+ <ul>
+<li>Compensation and Benefits,</li>
+<li>Recruitment and Staffing,</li>
+<li>Training and Development,</li>
+<li>Employee Relations,</li>
+<li>Employee satisfactions,</li>
+<li>Labor Laws and Legal Compliance</li>
+</ul></p>
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:460px">
+  <h3>PROCESS IN HRM</h3><br>
+  <img class="mySlides w3-animate-opacity" src="p.jpg" >
+  <p><br>Collect details about the employee <br>↓<br> Which job family profile does subgroup profile best fit? <br>↓<br>Assign the individual to specific job after further counselling<br></p>
+  </div>
+</div>
+</div>
+
+
+<div class="w3-container w3-center" id="SELECTION">
+  <hr>
+  <h3>SELECTION PROCESS</h3>
+</div>
+
+<div class="w3-row-padding"> 
+
+<div class="w3-third">
+<div class="w3-card">
+  <img src="s.png" alt="STEP 1" style="width:100%">
+  <div class="w3-container">
+  <p><br><center>Identify Need & Develop Position Description</center><br><center>↓</center><br><center>Recruitment planning</center><br></p>
+  </div>
+</div>
+</div>
+
+<div class="w3-third">
+<div class="w3-card-4">
+  <img src="s1.jpg" alt="STEP 2" style="width:100%">
+  <div class="w3-container">
+  <p><center>Sourcing & advertising</center><br><center>↓</center><br><center>Assess and interview candidates</center><br></p>
+  </div>
+</div>
+</div>
+
+<div class="w3-third">
+<div class="w3-card-4">
+  <img src="s2.jpg" alt="STEP 3" style="width:100%">
+  <div class="w3-container">
+  <p><center>Offer for student employment</center><br><center>↓</center><br><center>Onbording for success</center><br></p>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="w3-container" id="JOB DETAILS">
+  <hr>
+  <div class="w3-center">
+    <h2>JOB DETAILS</h2>
+    <p w3-class="w3-large">Details regarding available jobs and job domain</p>
+  </div>
+<div class="w3-responsive w3-card-4">
+<table class="w3-table w3-striped w3-bordered">
+<thead>
+<tr class="w3-theme">
+  <th>S.No</th>
+  <th>Job domain</th>
+  <th>Job</th>
+  <th>Landline</th>
+  <th>Email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td>Teaching Jobs</td>
+  <td>physics dept staff</td>
+  <td>04329 - 224050</td>
+  <td>gvhrsecschool@gmail.com</td>
+</tr>
+<tr>
+    <td>2</td>
+    <td>Diploma Jobs</td>
+    <td>Electrical engineer</td>
+    <td>04329 - 226780</td>
+    <td>eletraon@gmail.com</td>
+</tr>
+<tr>
+    <td>3</td>
+    <td>Tech Support</td>
+    <td>Software engineer</td>
+    <td>04329 - 224780</td>
+    <td>kmsolutions@gmail.com</td>
+</tr>
+<tr>
+    <td>4</td>
+    <td>Health Care</td>
+    <td>Physiotherapist</td>
+    <td>04329 - 274050</td>
+    <td>anuhealthcare@gmail.com</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<hr>
+<h2 class="w3-center" id="contact">Contact Us</h2>
+</div>
+
+<div class="w3-row-padding">
+
+<div class="w3-half">
+<form class="w3-container w3-card-4">
+  <h2>Contact Form</h2>
+  <div class="w3-section">      
+    <input class="w3-input" type="text" required>
+    <label>Name</label>
+  </div>
+  <div class="w3-section">      
+    <input class="w3-input" type="text" required>
+    <label>Email</label>
+  </div>
+  <div class="w3-section">      
+    <input class="w3-input" type="text" required>
+    <label>Domain</label>
+  </div>
+  <div class="w3-section">      
+    <input class="w3-input" type="text" required>
+    <label>Anything to say ?</label><br>
+<br><input type="submit" value="Submit">
+   </div>
+
+</form>
+</div>
+
+<div class="w3-half">
+    <div class="w3-card-4 w3-container">
+<img class="mySlides w3-animate-opacity" src="d.jpg" >
+    <h2>GET IN TOUCH</h2>
+    </div>
+</div>
+<hr>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-dark w3-padding-16">
+    <p><center><h2>YOUR DREAM JOB,WE MAKE SURE!<h2></center></p>
+<center><img class="mySlides w3-animate-opacity" src="t.jpg" ></center>
+    <b><center><h3>REACH US</h3></b>
+    <p>Address: 187/234 f-4,Sellur,
+      MADURAI,Tamilnadu, India</p>
+    <b>CONTACT US</b>
+    <p>Phone: 9567887656 / 6328194917</p>
+    <p>Board No: +91-44-28190467 / 28190891</p>
+       Email: pbjoboffers@gmail.com</p>
+    </center>
+</footer>
+
+<!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
+<script>
+// Side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "100%";
+  x.style.fontSize = "40px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Tabs
+function openCity(evt, cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  var activebtn = document.getElementsByClassName("testbtn");
+  for (i = 0; i < x.length; i++) {
+    activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-dark-grey";
+}
+
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
+
+// Accordions
+function myAccFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Slideshows
+var slideIndex = 1;
+
+function plusDivs(n) {
+  slideIndex = slideIndex + n;
+  showDivs(slideIndex);
+}
+
+function showDivs(n) {
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+showDivs(1);
+
+// Progress Bars
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 5;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width == 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+}
+</script>
+
+</body>
+</html>

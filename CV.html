@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CV page</title>
+    <style>
+      body{
+        background : yellow;
+        font-style: oblique;
+        font-family: 'Times New Roman', Times, serif;
+      }
+    </style>
+</head>
+<body>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.min.js"></script>
+    <script type="text/javascript">
+     
+       var app =  angular.module('MyApp', []);
+        app.controller('MyController', function ($scope, $window) {
+            $scope.emp = [
+                { Name: "John ", email: "johnkeren@gmail.com" , phone:"9845024578",domain:"Datascience"},
+                { Name: "Mariya", email: "mriya23@gmail.com" , phone:"9845024578",domain:"Tech supporter"},
+                { Name: "Suzanne Mathews", email: "suzmath@gmail.com", phone:"9845024578" ,domain:"Part-time"},
+                { Name: "Praveen", email: "praveenmsd7@gmail.com", phone:"9845024578",domain:"Diploma"}
+                ];
+ 
+            $scope.Add = function () {
+                //Add the new item to the Array.
+                var empcv = {};
+                empcv.Name = $scope.Name;
+                empcv.email = $scope.email;
+                empcv.phone = $scope.phone;
+                empcv.domain = $scope.domain;
+                $scope.emp.push(empcv);
+ 
+                //Clear the TextBoxes.
+                $scope.Name = "";
+                $scope.email = "";
+                $scope.phone = "";
+                $scope.domain = "";
+            };
+ 
+            $scope.Remove = function (index) {
+                //Find the record using Index from Array.
+                var name = $scope.emp[index].Name;
+                if ($window.confirm("Do you want to delete: " + name)) {
+                    //Remove the item from Array using Index.
+                    $scope.emp.splice(index, 1);
+                }
+            }
+            $scope.length = '';
+ $scope.getLength = function() {
+     $scope.length = $scope.emp.length;
+	 alert("Array Length = "+$scope.length);
+ };
+ });  
+  
+    </script>
+    <div ng-app="MyApp" ng-controller="MyController">
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone number</th>
+                <th>Job Domain</th>
+                <th></th>
+            </tr>
+            <tbody ng-repeat="m in emp">
+                <tr>
+                    <td>{{m.Name}}</td>
+                    <td>{{m.email}}</td>
+                    <td>{{m.phone}}</td>
+                    <td>{{m.domain}}</td>
+                    <td><input type="button" ng-click="Remove($index)" value="Remove" /></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td><input type="text" ng-model="Name" /></td>
+                    <td><input type="text" ng-model="email" /></td>
+                    <td><input type="text" ng-model="phone" /></td>
+                    <td><input type="text" ng-model="domain" /></td>
+                    <td><input type="button" ng-click="Add()" value="Add" /></td>
+                </tr>
+            </tfoot>
+        </table>
+    
+
+        <h3>Search your Competitors!</h3>
+        Domain : <input type="text" ng-model="fPIN" />
+        <table class="table">
+            <tr>
+                <th>Email</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Domain</th>
+            </tr>
+            <tr ng-repeat="m in emp | filter: { domain : fPIN }">
+                <td>{{m.email}}</td>
+                <td ng-bind="m.Name"></td>
+                <td ng-bind="m.phone"></td>
+                <td>{{m.domain}}</td>
+            </tr>
+        </table>
+  
+          <br>
+          <button ng-click="getLength()">Click To Get the number of competitors</button>
+           <p>Length = {{length}}</p>
+         
+      <br>
+    </div> 
+</body>
+</html>
+
